@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="app" ng-controller="MyController as ctrl">
+<head>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.0/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/1.2.0/ui-bootstrap-tpls.js"></script>
+    <script src="js/datetime-picker.js"></script>
+    <script src="js/script.js"></script>
+</head>
+<body style="padding:10px;" class="container-fluid"> 
+  
+  
+  <form class="form-horizontal">
+      <div class="form-group">
+          <label class="col-sm-3 control-label">Date with Time</label>
+          <div class="col-sm-10">
+              <p class="input-group">
+                  <input type="text" class="form-control" datetime-picker="dd/MM/yyyy HH:mm" ng-model="ctrl.picker3.date" is-open="ctrl.picker3.open" />
+              <span class="input-group-btn">
+                  <button type="button" class="btn btn-default" ng-click="ctrl.openCalendar($event, 'picker3')"><i class="fa fa-calendar"></i></button>
+              </span>
+              </p>
+          </div>
+      </div>
+      <pre>Selected date is: <em>  {{ ctrl.picker3.date | date:'dd/MM/yyyy hh:mm' }}</em></pre>
+      
+  </form>  
+  
+</div>
+</body>
+
+</html>
